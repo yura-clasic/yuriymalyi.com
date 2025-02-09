@@ -1,0 +1,72 @@
+import React from 'react'
+import { StaticImage } from 'gatsby-plugin-image'
+import Layout from '../components/layout'
+import PageHead from '../components/page-head'
+const AboutPage = () => {
+  return (
+    <Layout language="en">
+      <div className="about-container">
+        <div className="about-grid">
+          <div className="about-image-container">
+            <StaticImage
+              src="../images/profile-large.png"
+              alt="Yuriy Malyi"
+              className="rounded-lg"
+              objectFit="cover"
+              layout="fullWidth"
+              placeholder="blurred"
+            />
+          </div>
+
+          <div className="about-content">
+            <h1 className="about-header">
+              I'm Yuriy Malyi. I live in Kyiv Ukraine.
+            </h1>
+            <p className="about-text">
+              More than 19 years experience in IT. Last 13 years QA Manager/CTO/Head of QA in international companies - Luxoft, Comodo, Ciklum, Kyivstar, Fondy, MagneticOne, MHP. Expert in effective process organization, audit, improvement and unification. Certified Scrum Master, mentor in Scrum/Agile methodologies implementation and effective reporting. 5 years experience in teaching of Manual QA courses at IAMPM, BeetRootAcademy and mentoring of junior QAs. Active speaker at QA/Agile/PM conferences.
+            </p>
+
+            <p className="about-text">
+              I love setup QA Processes.
+            </p>
+
+            <p className="about-text">
+              On this page, I share my projects, ideas, and amusing stories from the world of IT. Let's make the digital world a little more interesting together!
+            </p>
+
+            <p className="about-text">
+              <a rel="noopener noreferrer" target="_blank" style={{ textDecoration: 'underline', color: '#3182ce' }} href="https://www.linkedin.com/feed/update/urn:li:activity:7242506234535251970/">2024.09.28 – PMDay Online - A system for tracking progress and following the process for more than 20 projects simultaneously.</a>
+            </p>
+
+            <div className="about-skills">
+              <h2 className="about-skills-title">Skills</h2>
+              <div className="skills-list">
+                <div className="skill-item">Frontend: React, Next, Gatsby, Vue, Nuxt</div>
+                <div className="skill-item">
+                  Backend: Node.js, Express, NestJS, Ruby, Roda, Rust, Actix Web
+                </div>
+                <div className="skill-item">
+                  Blockchain: Solidity, Web3.js, Solana, Truffle, Hardhat
+                </div>
+                <div className="skill-item">
+                  DevOps: Docker, Kubernetes, GitHub Actions, GitLab CI, Terraform
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Layout>
+  )
+}
+
+export default AboutPage
+
+export const Head = () => (
+  <>
+    <PageHead
+      title="About Me | Yuriy Malyi"
+      description="Learn more about Yuriy Malyi - Head of QA specializing in effective process implementation and Quality Assurance."
+    />
+  </>
+)

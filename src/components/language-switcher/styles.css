@@ -1,0 +1,77 @@
+.language-switcher-container {
+  position: relative;
+  display: inline-block;
+}
+
+.language-dropdown-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  border: 1px solid var(--border-color);
+  background: var(--bg-color);
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 1rem;
+  color: var(--text-color);
+  transition: all 0.2s ease;
+}
+
+.language-dropdown-button:hover {
+  border-color: #404040;
+}
+
+.language-dropdown-button .arrow {
+  font-size: 10px;
+  color: var(--text-color-secondary);
+}
+
+.language-dropdown {
+  position: absolute;
+  top: calc(100% + 4px);
+  right: 0;
+  min-width: 150px;
+  background: #222222;
+  border: 1px solid var(--color-border);
+  border-radius: 6px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+.language-option {
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  color: #fff;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.language-option.active {
+  background: #4a4a4a;
+}
+
+.language-option:first-child {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+}
+
+.language-option:last-child {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
+
+.language-option.active {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* Добавляем поддержку темной темы */
+@media (prefers-color-scheme: dark) {
+  .language-dropdown {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  }
+}
