@@ -19,7 +19,7 @@ const Item = ({ language, type, node }: ItemProps) => {
       link: { course: `/ru/courses/${node.frontmatter.slug}`, post: `/ru/posts/${node.frontmatter.slug}` }
     },
     uk: {
-      label: { course: 'Посмотреть курс', post: 'Читати далі' },
+      label: { course: 'Подивитись курс', post: 'Читати далі' },
       link: { course: `/uk/courses/${node.frontmatter.slug}`, post: `/uk/posts/${node.frontmatter.slug}` }
     }
   }
